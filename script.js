@@ -1,0 +1,31 @@
+const products = [
+    {id: 'promo1', name: 'promocional 1', image: 'resources/blusa.jpg'},
+    {id: 'promo2', name: 'promocional 2', image: 'resources/blusa.jpg'},
+    {id: 'promo3', name: 'promocional 3', image: 'resources/blusa.jpg'},
+    {id: 'promo4', name: 'promocional 4', image: 'resources/blusa.jpg'},
+    {id: 'cam1', name: 'camiseta 1', image: 'resources/blusa.jpg'},
+    {id: 'cam2', name: 'camiseta 2', image: 'resources/blusa.jpg'},
+    {id: 'cam3', name: 'camiseta 3', image: 'resources/blusa.jpg'},
+    {id: 'cam4', name: 'camiseta 4', image: 'resources/blusa.jpg'},
+    {id: 'cal1', name: 'calça 1', image: 'resources/shirt.jpg'},
+    {id: 'cal2', name: 'calça 2', image: 'resources/blusa.jpg'},
+    {id: 'cal3', name: 'calça 3', image: 'resources/blusa.jpg'},
+    {id: 'cal4', name: 'calça 4', image: 'resources/blusa.jpg'},
+    {id: 'av1', name: 'avental 1', image: 'resources/blusa.jpg'},
+    {id: 'av2', name: 'avental 2', image: 'resources/blusa.jpg'},
+    {id: 'av3', name: 'avental 3', image: 'resources/blusa.jpg'},
+    {id: 'av4', name: 'avental 4', image: 'resources/blusa.jpg'}
+]
+
+function loadProduct(){
+    const url = new URLSearchParams(window.location.search);
+    const id = url.get('id');
+    
+    products.forEach(product => {
+        if(product.id==id){
+            document.getElementById('productname').textContent = product.name;
+            const img = document.getElementById('productimg');
+            img.src = product.image;
+        }
+    });
+}
