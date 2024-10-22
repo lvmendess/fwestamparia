@@ -138,6 +138,18 @@ button a{
     text-decoration: none;
 }
 
+/*serviços*/
+
+.cartela{
+    display: flex;
+    flex-direction: row;
+}
+
+.cartela img{
+    max-width: 30vw;
+    row-gap: 1vw;
+}
+
 /*geral*/
 
 footer{
