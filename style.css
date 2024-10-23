@@ -143,11 +143,12 @@ button a{
 .cartela{
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .cartela img{
-    max-width: 30vw;
-    row-gap: 1vw;
+    max-width: 20vw;
+    margin: 1em;
 }
 
 /*geral*/
