@@ -63,13 +63,15 @@ a, a::before, a::after{
 .gallery{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
     margin: 1em;
 }
 
 .gallery a img{
     max-width: 20vw;
     margin: 1em;
+    margin-left: 2em;
 }
 
 .gallery a:hover{
@@ -171,4 +173,94 @@ footer{
 .text{
     margin: 1em;
     color: white;
+}
+
+@media (max-width:1024px) {
+    .logo a img{
+        max-width: 20rem;
+    }
+
+    .navbar ul li{
+        font-size: 1.5vh;
+    }
+
+    .gallery a img{
+        max-width: 40vw;
+        margin: 1em;
+        margin-left: 2em;
+    }
+
+    .cartela img{
+        max-width: 30vw;
+        margin: 1em;
+    }
+
+    .text{
+        margin: 1em;
+        font-size: 1.22em;
+        color: white;
+    }
+
+    .section-title{
+        font-size: 5vw;
+    }
+
+    #contatoP{
+        font-size: 2.9vw;
+        overflow-wrap: break-word;
+    }
+
+    /*produto*/
+    .product-view{
+        height: 90vh;
+        width: 90vw;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .produto{
+        display: flex;
+        flex-direction: column;
+        margin: 1em 5em 1em 5em;
+    }
+
+    .img-container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #productname{
+        font-size: 3vh;
+    }
+
+    #productimg{
+        max-width: 200%;
+    }
+
+    .product-details{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .bttn{
+        width: 20vh;
+        height: 3.75em;
+        border-radius: 0.3em;
+        background-color: #F98613;
+        border-color: #ee8d6a;
+        color: #fff;
+        font-size: 2vh;
+    }
+
+    #desc{
+        text-align: justify;
+        font-size: 2vh;
+    }
+
+    #desc ul li{
+        font-size: 2vh;
+    }
 }
